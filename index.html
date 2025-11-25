@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zona Gamer - Reseñas Arcade</title>
+  <style>
+    body {
+      background: radial-gradient(circle at center, #0d0221 0%, #000000 100%);
+      color: #00ffff;
+      font-family: 'Press Start 2P', monospace;
+      text-align: center;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-bottom: 40px;
+    }
+    h1 {
+      color: #ff00ff;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+      margin-top: 40px;
+    }
+    a {
+      display: inline-block;
+      margin: 20px;
+      color: #00ffcc;
+      text-decoration: none;
+      font-size: 14px;
+      border: 2px solid #00ffcc;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: #ffff00;
+      border-color: #ffff00;
+      box-shadow: 0 0 15px #ffff00;
+    }
+    section {
+      margin: 30px auto;
+      padding: 20px;
+      border: 2px solid #00ffff;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: left;
+      width: 90%;       /* ancho proporcional */
+      max-width: 800px; /* no se estira demasiado en pantallas grandes */
+      box-sizing: border-box;
+    }
+    h2 {
+      color: #ff00ff;
+      text-shadow: 0 0 5px #ff00ff;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #00ffcc;
+      background: #000000;
+      color: #00ffff;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 12px;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #ffff00;
+      box-shadow: 0 0 10px #ffff00;
+    }
+    button {
+      padding: 10px 20px;
+      font-family: 'Press Start 2P', monospace;
+      color: #00ffff;
+      background: #1a0033;
+      border: 2px solid #00ffcc;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      color: #ffff00;
+      border-color: #ffff00;
+      box-shadow: 0 0 15px #ffff00;
+    }
+    .comentario {
+      border-bottom: 1px solid #00ffcc;
+      padding: 10px 0;
+    }
+    .comentario p {
+      margin: 2px 0;
+      font-size: 12px;
+    }
+    .comentario .autor {
+      color: #ff00ff;
+      font-weight: bold;
+    }
+    footer {
+      background: #1a0033;
+      color: #ff00ff;
+      padding: 15px;
+      font-size: 10px;
+      border-top: 2px solid #ff00ff;
+      text-shadow: 0 0 5px #ff00ff;
+      margin-top: 30px;
+    }
+    @media screen and (max-width: 500px) {
+      section {
+        width: 95%; /* aún más proporcional en móviles */
+      }
+      input, textarea, button {
+        font-size: 10px;
+      }
+    }
+  </style>
+  <link href="imagenes/juegos.webp" rel="stylesheet">
+</head>
+<body>
+  <h1>🎮 Zona Gamer 🎮</h1>
+  <p>Explora las reseñas más épicas de videojuegos con estilo retro.</p>
+
+  <!-- Vínculos a tus otras páginas -->
+  <div>
+    <a href="aventura.html">🧭 Juegos de Aventura</a>
+    <a href="accion.html">💥 Juegos de Acción</a>
+    <a href="estrategia.html">🧠 Juegos de Estrategia</a>
+    <a href="retro.html">⚙️ Juegos Retro</a>
+  </div>
+
+  <!-- Secciones de Columnas, Guías y Reglas -->
+  <section>
+    <h2>📰 Columnas</h2>
+    <p>Descubre análisis profundos sobre videojuegos, noticias de la industria y recomendaciones de títulos clásicos y modernos.</p>
+  </section>
+
+  <section>
+    <h2>📚 Guías</h2>
+    <p>Encuentra tutoriales, estrategias y walkthroughs para superar cualquier desafío en tus juegos favoritos.</p>
+  </section>
+
+  <section>
+    <h2>⚠️ Reglas</h2>
+    <p>Participa de forma respetuosa en nuestra comunidad: sin spoilers sin advertencia, sin lenguaje ofensivo y siempre compartiendo tu pasión por los videojuegos.</p>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section>
+    <h2>✉️ Contacto</h2>
+    <form action="#" method="post">
+      <input type="text" name="nombre" placeholder="Tu Nombre" required>
+      <input type="email" name="email" placeholder="Tu Email" required>
+      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Sección de Comentarios Interactiva -->
+  <section>
+    <h2>💬 Comentarios</h2>
+    <form id="formComentario">
+      <input type="text" id="autor" placeholder="Tu nombre" required>
+      <textarea id="texto" rows="3" placeholder="Escribe tu comentario..." required></textarea>
+      <button type="submit">Agregar Comentario</button>
+    </form>
+    <div id="comentarios"></div>
+  </section>
+
+  <footer>© 2025 Zona Gamer | Estilo Arcade Retro</footer>
+
+  <script>
+    const form = document.getElementById('formComentario');
+    const comentariosDiv = document.getElementById('comentarios');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const autor = document.getElementById('autor').value;
+      const texto = document.getElementById('texto').value;
+
+      if(autor && texto){
+        const div = document.createElement('div');
+        div.classList.add('comentario');
+        div.innerHTML = `<p class="autor">${autor}:</p><p>${texto}</p>`;
+        comentariosDiv.prepend(div);
+
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
